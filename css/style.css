@@ -1,5 +1,6 @@
 /* Used layout.bradwoods.io/customize for the foundation of this CSS template */
-
+/* layout  has header, main, and footer sections in a grid, similar to previous HTML site. Check further in this file for 
+    section-specific styling. */
 .layout {
   display: grid;
   grid:
@@ -15,6 +16,7 @@ body {
   background-color: #dfd9e2;
 }
 span {
+  font-size: 25px;
   animation: myAnim 2s ease 0s 1 normal forwards;
 }
 
@@ -33,13 +35,15 @@ span {
 }
 /* example of psuedo class usage in css */
 
+/* from class exampe but chaged some attributes */
 .menu li:hover {
-  background-color: #4c9e9e;
+  background-color: #176767;
   border-radius: 5px;
   /* example of css transition */
   transition: 0.3s ease;
 }
 
+/* Used for quote on homepage */
 .quote {
   width: auto;
   text-align: center;
@@ -54,6 +58,7 @@ span {
     "Lucida Sans", Arial, sans-serif;
 }
 
+/* Using id of container to apply animation */
 #progressToDegreeContainer {
   animation: shakeHorizontal 1s linear 0s 5 normal forwards;
 }
@@ -70,16 +75,22 @@ a {
 .menu {
   display: flex;
   gap: 3em;
-  font-size: 18px;
+  font-size: 25px;
 }
 
 .pics {
-  border-radius: 0ch;
+  border: 5px solid #555;
+}
+
+.pics:hover {
+  animation: picHover 2s ease 0s 1 normal forwards;
 }
 
 .header {
   grid-area: header;
 }
+
+/* background colors for main and footer sections */
 .main {
   grid-area: main;
   background-color: #e59500;
@@ -101,6 +112,7 @@ input[type="checkbox"] {
   user-select: none;
 }
 
+/* This was taken from the in-class demo of implementing a hamburger for smaller windows */
 /* responsive design using css media queries */
 @media (max-width: 768px) {
   .menu {
@@ -128,8 +140,39 @@ input[type="checkbox"] {
   }
 }
 
-/* Generated from https://webcode.tools/generators/css/keyframe-animation?utm_content=cmp-true */
+/* ANIMATIONS generated from https://webcode.tools/generators/css/keyframe-animation?utm_content=cmp-true */
+
+/* This animation is used for items with the span tag (website title in navbar) */
 @keyframes myAnim {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateY(-8px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateY(8px);
+  }
+
+  80% {
+    transform: translateY(6.4px);
+  }
+
+  90% {
+    transform: translateY(-6.4px);
+  }
+}
+
+/* animation for progress bar on home page */
+@keyframes shakeHorizontal {
   0%,
   100% {
     transform: translateX(0);
@@ -157,30 +200,35 @@ input[type="checkbox"] {
   }
 }
 
-@keyframes shakeHorizontal {
+/* for hover psudoclass, to be used with pictures */
+@keyframes picHover {
   0%,
   100% {
-    transform: translateX(0);
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
   }
 
-  10%,
-  30%,
-  50%,
-  70% {
-    transform: translateX(-10px);
+  10% {
+    transform: rotate(8deg);
   }
 
   20%,
   40%,
   60% {
-    transform: translateX(10px);
+    transform: rotate(-10deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotate(10deg);
   }
 
   80% {
-    transform: translateX(8px);
+    transform: rotate(-8deg);
   }
 
   90% {
-    transform: translateX(-8px);
+    transform: rotate(8deg);
   }
 }

@@ -3,37 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS file -->
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Scott Okalski</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
   </head>
   <body>
-    <header id="page_header">
-      <div id="logoContainer">
-        <img
-          src="/img/scottOkalski.jpg"
-          alt="Photo of Scott Okalski"
-          width="75"
-          height="75"
-        />
-        <span>Scott Okalski's Portfolio Website</span>
-      </div>
+    <section class="layout">
+    <div class="header">
+        <nav class="navbar">
+          <!-- LOGO container-->
+          <div class="pics">
+            <img
+              src="/img/scottOkalski.jpg"
+              alt="Photo of Scott Okalski"
+              width="75"
+              height="75"
+            />
+          </div>
+          <span>Scott Okalski's Portfolio Website</span>
+          <!-- Navigation menu container -->
+          <ul class="nav-links">
+            <!-- HAMBURGER menu icon and checkbox hack -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
-      <div id="navContainer">
-        <nav id="'navbar">
-          <a href="../index.html" class="navOption">Home</a>
-          <a href="./resume.html" class="navOption">Resume</a>
-          <a href="./funfacts.html" class="navOption">Fun Facts</a>
-          <!-- for spacing -->
-          <hr />
+            <!-- Write out the nav menu options -->
+            <div class="menu">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="./resume.html">Resume</a></li>
+              <li><a href="./funfacts.html">Fun Facts</a></li>
+            </div>
+          </ul>
         </nav>
-      </div>
-    </header>
-    <main>
+        </div>
+    <div class="main">
       <!-- begins main content of page -->
       <h3>Some fun facts about me...</h3>
       <div id="favBookContainer">
         <h4>Favorite Book: The Cat in the Hat</h4>
-        <img src="../img/catHat.png" alt="Book cover: The Cat in the Hat" />
+        <img src="../img/catHat.png" alt="Book cover: The Cat in the Hat" class="pics" />
         <h5>
           The quintessential childhood book read to millions across many
           generations. Fun artwork and wordplay. Great to revisit with your
@@ -87,12 +96,13 @@
       </div>
 
       <!-- end of page's content -->
-    </main>
-    <footer>
+    </div>
+    <div class="footer">
       <!-- footer found on every page -->
-      <hr />
+      
       © 2023 Scott Okalski. All rights reserved.<br />
       <a href="mailto:scottokalski@oakland.edu">Email Me</a>
     </footer>
+    </section>
   </body>
 </html>
