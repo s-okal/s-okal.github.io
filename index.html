@@ -5,61 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scott Okalski</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
+    <!-- CSS file -->
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <header id="page_header">
-      <div id="logoContainer">
-        <img
-          src="/img/scottOkalski.jpg"
-          alt="Photo of Scott Okalski"
-          width="75"
-          height="75"
-        />
-        <span>Scott Okalski's Portfolio Website</span>
-        <!-- Indents the quote under picture. CSS preferred for this type of styling. Looked this up - W3Schools -->
-        <blockquote>
-          "Nothing in the world is worth having or worth doing unless it means
-          effort, pain, difficulty…" -- Theodore Roosevelt
-        </blockquote>
-      </div>
-      <div id="navContainer">
-        <nav id="'navbar">
-          <a href="./index.html" class="navOption">Home</a>
-          <a href="./html/resume.html" class="navOption">Resume</a>
-          <a href="./html/funfacts.html" class="navOption">Fun Facts</a>
-          <!-- for spacing -->
-          <hr />
+    <section class="layout">
+      <div class="header">
+        <nav class="navbar">
+          <!-- LOGO container-->
+          <div class="pics">
+            <img
+              src="/img/scottOkalski.jpg"
+              alt="Photo of Scott Okalski"
+              width="75"
+              height="75"
+            />
+          </div>
+          <span>Scott Okalski's Portfolio Website</span>
+          <!-- Navigation menu container -->
+          <ul class="nav-links">
+            <!-- HAMBURGER menu icon and checkbox hack -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <!-- Write out the nav menu options -->
+            <div class="menu">
+              <li><a href="./index2.html">Home</a></li>
+              <li><a href="./html/resume.html">Resume</a></li>
+              <li><a href="./html/funfacts.html">Fun Facts</a></li>
+            </div>
+          </ul>
         </nav>
       </div>
-    </header>
-    <div id="informationContainer">
-      <main>
-        Hello! Welcome to my personal website. <br />
-        I'm a Senior at Oakland University studying Information Technology.
-        <br />
-        I am currently working as an IT Intern at Plastic Omnium. <br />
-        I am passionate about technology and am excited to implement what I've
-        learned in a professional environment.
-      </main>
-    </div>
-    <div id="progressToDegreeContainer">
-      <br />
-      <!-- progress bar tutorial: https://www.w3schools.com/tags/tag_progress.asp -->
-      <label for="file">Progress to Degree - 96/128 credits earned:</label>
-      <progress id="file" value="96" max="128">75%</progress>
-    </div>
-    <div id="learnMoreContainer">
-      <p>
-        This website also contains my
-        <a href="./html/resume.html">resume</a> and some
-        <a href="./html/funfacts.html">fun facts</a> about me.
-      </p>
-    </div>
-
-    <footer>
-      <hr />
-      © 2023 Scott Okalski. All rights reserved.<br />
-      <a href="mailto:scottokalski@oakland.edu">Email Me</a>
-    </footer>
+      <div class="main">
+        <p class="quote">
+          "Nothing in the world is worth having or worth doing unless it means
+          effort, pain, difficulty…" -- Theodore Roosevelt
+        </p>
+        <p class="bodyText">
+          Hello! Welcome to my personal website. <br />
+          I'm a Senior at Oakland University studying Information Technology.
+          <br />
+          I am currently working as an IT Intern at Plastic Omnium. <br />I am
+          passionate about technology and am excited to implement what I've
+          learned in a professional environment. <br />
+          <br />
+          Progress to Degree - 96/128 credits earned: <br />
+        </p>
+        <div id="progressToDegreeContainer">
+          <!-- progress bar tutorial: https://www.w3schools.com/tags/tag_progress.asp -->
+          <p class="bodyText">
+            <progress id="file" value="96" max="128">75%</progress>
+          </p>
+        </div>
+        <div id="learnMoreContainer" class="bodyText">
+          <p>
+            This website also contains my
+            <a href="./html/resume.html">resume</a> and some
+            <a href="./html/funfacts.html">fun facts</a> about me.
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+        © 2023 Scott Okalski. All rights reserved.<br />
+        <a href="mailto:scottokalski@oakland.edu">Email Me</a>
+      </div>
+    </section>
   </body>
 </html>

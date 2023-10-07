@@ -1,0 +1,186 @@
+/* Used layout.bradwoods.io/customize for the foundation of this CSS template */
+
+.layout {
+  display: grid;
+  grid:
+    "header" auto
+    "main" 1fr
+    "footer" auto
+    / 1fr;
+  gap: 8px;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #dfd9e2;
+}
+span {
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+/* style the layout of the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #5bc0eb;
+  color: #bee7e8;
+}
+
+.nav-links a {
+  color: #fff;
+}
+/* example of psuedo class usage in css */
+
+.menu li:hover {
+  background-color: #4c9e9e;
+  border-radius: 5px;
+  /* example of css transition */
+  transition: 0.3s ease;
+}
+
+.quote {
+  width: auto;
+  text-align: center;
+  font-style: italic;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.bodyText {
+  width: auto;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+#progressToDegreeContainer {
+  animation: shakeHorizontal 1s linear 0s 5 normal forwards;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* style the navbar menu */
+.menu {
+  display: flex;
+  gap: 3em;
+  font-size: 18px;
+}
+
+.pics {
+  border-radius: 0ch;
+}
+
+.header {
+  grid-area: header;
+}
+.main {
+  grid-area: main;
+  background-color: #e59500;
+}
+.footer {
+  grid-area: footer;
+  background-color: #c3423f;
+  text-align: center;
+}
+
+/* responsive styling for the navbar */
+input[type="checkbox"] {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+/* responsive design using css media queries */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: teal;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Generated from https://webcode.tools/generators/css/keyframe-animation?utm_content=cmp-true */
+@keyframes myAnim {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateX(10px);
+  }
+
+  80% {
+    transform: translateX(8px);
+  }
+
+  90% {
+    transform: translateX(-8px);
+  }
+}
+
+@keyframes shakeHorizontal {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateX(10px);
+  }
+
+  80% {
+    transform: translateX(8px);
+  }
+
+  90% {
+    transform: translateX(-8px);
+  }
+}
